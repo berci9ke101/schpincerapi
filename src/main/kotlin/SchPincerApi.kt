@@ -81,7 +81,7 @@ private suspend fun getBody(url: Url, timeMillis: Long = 2000L): String {
  *
  * @return a list of the current openings
  */
-suspend fun parseBody(): List<Opening> {
+private suspend fun parseBody(): List<Opening> {
     //we need this magic to use the public api, so we request the items that are available now
     //and we match them to a circle, kinda jerky
     val now: String = getBody(Url(API_URL + ITEMS_NOW))
@@ -105,3 +105,10 @@ suspend fun parseBody(): List<Opening> {
         listOf()
     }
 }
+
+/**
+ * Returns the current openings
+ *
+ * @return a list of the current openings
+ */
+suspend fun getOpenings() = parseBody()
