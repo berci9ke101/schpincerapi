@@ -1,2 +1,2 @@
 # schpincerapi
-SchPincer API
+[SchPincer API](https://github.com/kir-dev/sch-pincer)
